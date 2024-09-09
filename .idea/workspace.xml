@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb081aab-edb6-47ae-863b-5e69bb9d7fbd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/httpserver/config/Configuration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/httpserver/config/ConfigurationManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/httpserver/config/HttpConfigurationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/httpserver/core/HttpConnectionWorkerThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/httpserver/core/ServerListenerThread.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/http.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codefromscratch/httpserver/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/httpserver/HttpServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,11 +90,38 @@
       <option name="project" value="LOCAL" />
       <updated>1725699262881</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Http Configuration Exception">
+      <option name="closed" value="true" />
+      <created>1725780650478</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725780650478</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Configuration class for port and webroot">
+      <option name="closed" value="true" />
+      <created>1725780727013</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725780727013</updated>
+    </task>
+    <task id="LOCAL-00004" summary="A singleton class for configuration manager">
+      <option name="closed" value="true" />
+      <created>1725780788763</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1725780788763</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Json methods to work with" />
-    <option name="LAST_COMMIT_MESSAGE" value="Json methods to work with" />
+    <MESSAGE value="Http Configuration Exception" />
+    <MESSAGE value="Configuration class for port and webroot" />
+    <MESSAGE value="A singleton class for configuration manager" />
+    <option name="LAST_COMMIT_MESSAGE" value="A singleton class for configuration manager" />
   </component>
 </project>
