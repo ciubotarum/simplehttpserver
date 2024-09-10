@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb081aab-edb6-47ae-863b-5e69bb9d7fbd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Request.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/http.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpParsingException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpStatusCode.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/com/codefromscratch/http/HttpParserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codefromscratch/httpserver/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/httpserver/HttpServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codefromscratch/httpserver/core/HttpConnectionWorkerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/httpserver/core/HttpConnectionWorkerThread.java" afterDir="false" />
     </list>
@@ -22,8 +25,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -39,19 +43,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HttpServer.executor": "Run",
-    "JUnit.HttpParserTest.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HttpServer.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HttpParserTest.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -160,7 +164,31 @@
       <option name="project" value="LOCAL" />
       <updated>1725868301141</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add a http parser">
+      <option name="closed" value="true" />
+      <created>1725870144739</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1725870144739</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Copy of a valid http request">
+      <option name="closed" value="true" />
+      <created>1725870188368</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1725870188368</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add a json file with port and webroot">
+      <option name="closed" value="true" />
+      <created>1725870240586</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1725870240586</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -170,6 +198,9 @@
     <MESSAGE value="A singleton class for configuration manager" />
     <MESSAGE value="Http Connection Worker Thread" />
     <MESSAGE value="Server Listener Thread" />
-    <option name="LAST_COMMIT_MESSAGE" value="Server Listener Thread" />
+    <MESSAGE value="Add a http parser" />
+    <MESSAGE value="Copy of a valid http request" />
+    <MESSAGE value="Add a json file with port and webroot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a json file with port and webroot" />
   </component>
 </project>
