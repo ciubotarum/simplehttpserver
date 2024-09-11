@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb081aab-edb6-47ae-863b-5e69bb9d7fbd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpParsingException.java" afterDir="false" />
+    <list default="true" id="eb081aab-edb6-47ae-863b-5e69bb9d7fbd" name="Changes" comment="Add a json file with port and webroot">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpStatusCode.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/com/codefromscratch/http/HttpParserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpParser.java" afterDir="false" />
@@ -188,7 +183,39 @@
       <option name="project" value="LOCAL" />
       <updated>1725870240586</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add enum for Http method">
+      <option name="closed" value="true" />
+      <created>1725955176624</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1725955176624</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add enum for status code">
+      <option name="closed" value="true" />
+      <created>1725955206617</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1725955206617</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add an abstract class for Http message">
+      <option name="closed" value="true" />
+      <created>1725955243299</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1725955243299</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add a Http exception">
+      <option name="closed" value="true" />
+      <created>1725955278044</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1725955278044</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -200,7 +227,11 @@
     <MESSAGE value="Server Listener Thread" />
     <MESSAGE value="Add a http parser" />
     <MESSAGE value="Copy of a valid http request" />
+    <MESSAGE value="Add enum for Http method" />
+    <MESSAGE value="Add enum for status code" />
+    <MESSAGE value="Add an abstract class for Http message" />
     <MESSAGE value="Add a json file with port and webroot" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a json file with port and webroot" />
+    <MESSAGE value="Add a Http exception" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a Http exception" />
   </component>
 </project>
