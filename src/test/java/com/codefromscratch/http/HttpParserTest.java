@@ -8,8 +8,7 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -31,11 +30,10 @@ class HttpParserTest {
         } catch (HttpParsingException e) {
             fail(e);
         }
-
+        assertNotNull(request);
         assertEquals(request.getMethod(), HttpMethod.GET);
+        assertEquals(request.getRequestTarget(), "/");
     }
-
-
     @Test
     void parseHttpRequestBadMethod1() {
         try {
@@ -47,7 +45,6 @@ class HttpParserTest {
             assertEquals(e.getErrorCode(), HttpStatusCode.SERVER_ERROR_501_NOT_IMPLEMENTED);
         }
     }
-
     @Test
     void parseHttpRequestBadMethod2() {
         try {
@@ -75,6 +72,17 @@ class HttpParserTest {
         try {
             HttpRequest request = httpParser.parseHttpRequest(
                     generateBadTestCaseEmptyRequestLine()
+            );
+            fail();
+        } catch (HttpParsingException e) {
+            assertEquals(e.getErrorCode(), HttpStatusCode.CLIENT_ERROR_400_BAD_REQUEST);
+        }
+    }
+    @Test
+    void parseHttpRequestLineCRnoLF() {
+        try {
+            HttpRequest request = httpParser.parseHttpRequest(
+                    generateBadTestCaseRequestLineOnlyCRnoLF()
             );
             fail();
         } catch (HttpParsingException e) {
@@ -169,4 +177,19 @@ class HttpParserTest {
 
         return inputStream;
     }
+    private InputStream generateBadTestCaseRequestLineOnlyCRnoLF() {
+        String rawData = "GET /  HTTP/1.1\r" +   // <---------- no LF (line field)
+                "Host: localhost:8080\r\n" +
+                "Accept-Language: en-GB,en;q=0.9,en-US;q=0.8\r\n" +
+                "\r\n";
+
+        InputStream inputStream = new ByteArrayInputStream(
+                rawData.getBytes(
+                        StandardCharsets.US_ASCII
+                )
+        );
+
+        return inputStream;
+    }
+
 }

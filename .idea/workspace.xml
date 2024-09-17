@@ -7,6 +7,7 @@
     <list default="true" id="eb081aab-edb6-47ae-863b-5e69bb9d7fbd" name="Changes" comment="Add a json file with port and webroot">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codefromscratch/httpserver/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/httpserver/HttpServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codefromscratch/httpserver/core/HttpConnectionWorkerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/httpserver/core/HttpConnectionWorkerThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/codefromscratch/http/HttpParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codefromscratch/http/HttpParserTest.java" afterDir="false" />
@@ -238,7 +239,23 @@
       <option name="project" value="LOCAL" />
       <updated>1726475968909</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Generate test cases for invalid get request">
+      <option name="closed" value="true" />
+      <created>1726559894678</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1726559894678</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Add functionalities for Http parsing">
+      <option name="closed" value="true" />
+      <created>1726559995402</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1726559995402</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -256,8 +273,10 @@
     <MESSAGE value="Add a Http exception" />
     <MESSAGE value="Http Request, get and set method" />
     <MESSAGE value="Http Parser Test" />
-    <MESSAGE value="Add a json file with port and webroot" />
     <MESSAGE value="Add a new variable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a new variable" />
+    <MESSAGE value="Generate test cases for invalid get request" />
+    <MESSAGE value="Add a json file with port and webroot" />
+    <MESSAGE value="Add functionalities for Http parsing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add functionalities for Http parsing" />
   </component>
 </project>
