@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb081aab-edb6-47ae-863b-5e69bb9d7fbd" name="Changes" comment="Add a json file with port and webroot">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/BadHttpVersionException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpVersion.java" afterDir="false" />
+    <list default="true" id="eb081aab-edb6-47ae-863b-5e69bb9d7fbd" name="Changes" comment="Add Http version">
       <change afterPath="$PROJECT_DIR$/src/test/java/com/codefromscratch/http/HttpHeadersParserTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/com/codefromscratch/http/HttpVersionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codefromscratch/httpserver/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/httpserver/HttpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpParsingException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpParsingException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +42,7 @@
     "Application.HttpServer.executor": "Run",
     "JUnit.HttpHeadersParserTest.testMultipleHeaders.executor": "Run",
     "JUnit.HttpParserTest.executor": "Run",
+    "JUnit.HttpParserTest.parseHttpRequest.executor": "Debug",
     "JUnit.HttpParserTest.parseHttpRequestBadHttpVersion.executor": "Run",
     "JUnit.HttpParserTest.parseHttpRequestSupportedHttpVersion1.executor": "Run",
     "JUnit.HttpParserTest.parseHttpRequestUnsupportedHttpVersion.executor": "Run",
@@ -64,7 +64,7 @@
       <recent name="com.codefromscratch.http" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HttpHeadersParserTest.testMultipleHeaders">
+  <component name="RunManager" selected="JUnit.HttpParserTest.parseHttpRequest">
     <configuration name="HttpHeadersParserTest.testMultipleHeaders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simplehttpserver" />
       <extension name="coverage">
@@ -81,6 +81,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HttpParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simplehttpserver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codefromscratch.http.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codefromscratch.http" />
+      <option name="MAIN_CLASS_NAME" value="com.codefromscratch.http.HttpParserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HttpParserTest.parseHttpRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simplehttpserver" />
       <extension name="coverage">
@@ -92,22 +107,6 @@
       <option name="PACKAGE_NAME" value="com.codefromscratch.http" />
       <option name="MAIN_CLASS_NAME" value="com.codefromscratch.http.HttpParserTest" />
       <option name="METHOD_NAME" value="parseHttpRequest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HttpParserTest.parseHttpRequestBadHttpVersion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="simplehttpserver" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.codefromscratch.http.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.codefromscratch.http" />
-      <option name="MAIN_CLASS_NAME" value="com.codefromscratch.http.HttpParserTest" />
-      <option name="METHOD_NAME" value="parseHttpRequestBadHttpVersion" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -147,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HttpHeadersParserTest.testMultipleHeaders" />
         <item itemvalue="JUnit.HttpParserTest.parseHttpRequest" />
+        <item itemvalue="JUnit.HttpParserTest" />
+        <item itemvalue="JUnit.HttpHeadersParserTest.testMultipleHeaders" />
         <item itemvalue="JUnit.HttpParserTest.parseHttpRequestSupportedHttpVersion1" />
         <item itemvalue="JUnit.HttpParserTest.parseHttpRequestUnsupportedHttpVersion" />
-        <item itemvalue="JUnit.HttpParserTest.parseHttpRequestBadHttpVersion" />
       </list>
     </recent_temporary>
   </component>
@@ -355,11 +354,26 @@
       <option name="project" value="LOCAL" />
       <updated>1726644997973</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Add Bad Http version exception">
+      <option name="closed" value="true" />
+      <created>1726731778490</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1726731778490</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Add Http version enum, constructor and get method">
+      <option name="closed" value="true" />
+      <created>1726731924121</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1726731924121</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Json methods to work with" />
     <MESSAGE value="Http Configuration Exception" />
     <MESSAGE value="Configuration class for port and webroot" />
     <MESSAGE value="A singleton class for configuration manager" />
@@ -380,8 +394,26 @@
     <MESSAGE value="Finished to parse headers" />
     <MESSAGE value="Add tests for bad version" />
     <MESSAGE value="Add getters and setters for header and version" />
-    <MESSAGE value="Add a json file with port and webroot" />
     <MESSAGE value="Add a new status code 505" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a new status code 505" />
+    <MESSAGE value="Add Bad Http version exception" />
+    <MESSAGE value="Add a json file with port and webroot" />
+    <MESSAGE value="Add Http version" />
+    <MESSAGE value="Add Http version enum, constructor and get method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Http version enum, constructor and get method" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="com.codefromscratch.http.HttpParsingException" package="com.codefromscratch.http" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/codefromscratch/http/HttpParserTest.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
