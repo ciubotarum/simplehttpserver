@@ -8,7 +8,7 @@ public class HttpRequest extends HttpMessage{
     private String requestTarget;
     private String originalHttpVersion;  // literal from the request
     private HttpVersion bestCompatibleHttpVersion;
-    private HashMap<String, String> headers = new HashMap<>();
+    private final HashMap<String, String> headers = new HashMap<>();
 
     HttpRequest() {
 
@@ -48,7 +48,7 @@ public class HttpRequest extends HttpMessage{
     }
 
     public void setRequestTarget(String requestTarget) throws HttpParsingException {
-        if (requestTarget == null || requestTarget.length() == 0) {
+        if (requestTarget == null || requestTarget.isEmpty()) {
             throw new HttpParsingException(HttpStatusCode.SERVER_ERROR_500_INTERNAL_SERVER_ERROR);
         }
         this.requestTarget = requestTarget;
@@ -59,7 +59,7 @@ public class HttpRequest extends HttpMessage{
         this.bestCompatibleHttpVersion = HttpVersion.getBestCompatibleVersion(originalHttpVersion);
         if (this.bestCompatibleHttpVersion == null) {
             throw new HttpParsingException(
-                    HttpStatusCode.SERVER_ERROR_505_HTTP_VERSION_NOT_SUPORTED
+                    HttpStatusCode.SERVER_ERROR_505_HTTP_VERSION_NOT_SUPPORTED
             );
         }
     }
