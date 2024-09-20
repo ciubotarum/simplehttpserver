@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb081aab-edb6-47ae-863b-5e69bb9d7fbd" name="Changes" comment="Add Http version">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/codefromscratch/http/HttpHeadersParserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/codefromscratch/http/HttpVersionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpParsingException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpParsingException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpStatusCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpStatusCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpVersion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codefromscratch/http/HttpVersion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/codefromscratch/http/HttpHeadersParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codefromscratch/http/HttpHeadersParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/codefromscratch/http/HttpParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codefromscratch/http/HttpParserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,13 +43,19 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.HttpServer.executor": "Run",
-    "JUnit.HttpHeadersParserTest.testMultipleHeaders.executor": "Run",
-    "JUnit.HttpParserTest.executor": "Run",
-    "JUnit.HttpParserTest.parseHttpRequest.executor": "Debug",
+    "JUnit.HttpHeadersParserTest.executor": "Run",
+    "JUnit.HttpHeadersParserTest.testMultipleHeaders.executor": "Debug",
+    "JUnit.HttpHeadersParserTest.testSimpleSingleHeader.executor": "Run",
+    "JUnit.HttpParserTest.executor": "Debug",
+    "JUnit.HttpParserTest.parseHttpRequest.executor": "Run",
     "JUnit.HttpParserTest.parseHttpRequestBadHttpVersion.executor": "Run",
+    "JUnit.HttpParserTest.parseHttpRequestBadMethod1.executor": "Run",
     "JUnit.HttpParserTest.parseHttpRequestSupportedHttpVersion1.executor": "Run",
     "JUnit.HttpParserTest.parseHttpRequestUnsupportedHttpVersion.executor": "Run",
     "JUnit.HttpVersionTest.executor": "Run",
+    "JUnit.HttpVersionTest.getBestCompatibleVersionBadFormat.executor": "Run",
+    "JUnit.HttpVersionTest.getBestCompatibleVersionExactMatch.executor": "Run",
+    "JUnit.HttpVersionTest.getBestCompatibleVersionHigherVersion.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -64,8 +73,8 @@
       <recent name="com.codefromscratch.http" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HttpParserTest.parseHttpRequest">
-    <configuration name="HttpHeadersParserTest.testMultipleHeaders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.HttpVersionTest">
+    <configuration name="HttpHeadersParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simplehttpserver" />
       <extension name="coverage">
         <pattern>
@@ -75,28 +84,12 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.codefromscratch.http" />
       <option name="MAIN_CLASS_NAME" value="com.codefromscratch.http.HttpHeadersParserTest" />
-      <option name="METHOD_NAME" value="testMultipleHeaders" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HttpParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="simplehttpserver" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.codefromscratch.http.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.codefromscratch.http" />
-      <option name="MAIN_CLASS_NAME" value="com.codefromscratch.http.HttpParserTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HttpParserTest.parseHttpRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HttpVersionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simplehttpserver" />
       <extension name="coverage">
         <pattern>
@@ -105,14 +98,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.codefromscratch.http" />
-      <option name="MAIN_CLASS_NAME" value="com.codefromscratch.http.HttpParserTest" />
-      <option name="METHOD_NAME" value="parseHttpRequest" />
+      <option name="MAIN_CLASS_NAME" value="com.codefromscratch.http.HttpVersionTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpVersionTest.getBestCompatibleVersionBadFormat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simplehttpserver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codefromscratch.http.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codefromscratch.http" />
+      <option name="MAIN_CLASS_NAME" value="com.codefromscratch.http.HttpVersionTest" />
+      <option name="METHOD_NAME" value="getBestCompatibleVersionBadFormat" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HttpParserTest.parseHttpRequestSupportedHttpVersion1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HttpVersionTest.getBestCompatibleVersionExactMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simplehttpserver" />
       <extension name="coverage">
         <pattern>
@@ -121,14 +129,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.codefromscratch.http" />
-      <option name="MAIN_CLASS_NAME" value="com.codefromscratch.http.HttpParserTest" />
-      <option name="METHOD_NAME" value="parseHttpRequestSupportedHttpVersion1" />
+      <option name="MAIN_CLASS_NAME" value="com.codefromscratch.http.HttpVersionTest" />
+      <option name="METHOD_NAME" value="getBestCompatibleVersionExactMatch" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HttpParserTest.parseHttpRequestUnsupportedHttpVersion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HttpVersionTest.getBestCompatibleVersionHigherVersion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simplehttpserver" />
       <extension name="coverage">
         <pattern>
@@ -137,8 +145,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.codefromscratch.http" />
-      <option name="MAIN_CLASS_NAME" value="com.codefromscratch.http.HttpParserTest" />
-      <option name="METHOD_NAME" value="parseHttpRequestUnsupportedHttpVersion" />
+      <option name="MAIN_CLASS_NAME" value="com.codefromscratch.http.HttpVersionTest" />
+      <option name="METHOD_NAME" value="getBestCompatibleVersionHigherVersion" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -146,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HttpParserTest.parseHttpRequest" />
-        <item itemvalue="JUnit.HttpParserTest" />
-        <item itemvalue="JUnit.HttpHeadersParserTest.testMultipleHeaders" />
-        <item itemvalue="JUnit.HttpParserTest.parseHttpRequestSupportedHttpVersion1" />
-        <item itemvalue="JUnit.HttpParserTest.parseHttpRequestUnsupportedHttpVersion" />
+        <item itemvalue="JUnit.HttpVersionTest" />
+        <item itemvalue="JUnit.HttpVersionTest.getBestCompatibleVersionHigherVersion" />
+        <item itemvalue="JUnit.HttpVersionTest.getBestCompatibleVersionBadFormat" />
+        <item itemvalue="JUnit.HttpVersionTest.getBestCompatibleVersionExactMatch" />
+        <item itemvalue="JUnit.HttpHeadersParserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -370,12 +378,26 @@
       <option name="project" value="LOCAL" />
       <updated>1726731924121</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Add Http header parser tests">
+      <option name="closed" value="true" />
+      <created>1726757051511</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1726757051511</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Add testing for Http version">
+      <option name="closed" value="true" />
+      <created>1726757090559</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1726757090559</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Http Configuration Exception" />
-    <MESSAGE value="Configuration class for port and webroot" />
     <MESSAGE value="A singleton class for configuration manager" />
     <MESSAGE value="Http Connection Worker Thread" />
     <MESSAGE value="Server Listener Thread" />
@@ -397,23 +419,45 @@
     <MESSAGE value="Add a new status code 505" />
     <MESSAGE value="Add Bad Http version exception" />
     <MESSAGE value="Add a json file with port and webroot" />
-    <MESSAGE value="Add Http version" />
     <MESSAGE value="Add Http version enum, constructor and get method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Http version enum, constructor and get method" />
+    <MESSAGE value="Add Http header parser tests" />
+    <MESSAGE value="Add Http version" />
+    <MESSAGE value="Add testing for Http version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add testing for Http version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
+        <breakpoint type="java-exception">
           <properties class="com.codefromscratch.http.HttpParsingException" package="com.codefromscratch.http" />
           <option name="timeStamp" value="2" />
         </breakpoint>
+        <breakpoint type="java-exception">
+          <properties class="com.codefromscratch.http.HttpParsingException" package="com.codefromscratch.http" />
+          <option name="timeStamp" value="10" />
+        </breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/codefromscratch/http/HttpParserTest.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/codefromscratch/http/HttpParserTest.java</url>
           <line>30</line>
-          <option name="timeStamp" value="3" />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/codefromscratch/http/HttpHeadersParserTest.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="request" />
+        <watch expression="matcher" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
