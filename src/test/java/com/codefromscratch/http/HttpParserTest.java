@@ -110,7 +110,7 @@ class HttpParserTest {
             );
             fail();
         } catch (HttpParsingException e) {
-            assertEquals(e.getErrorCode(), HttpStatusCode.SERVER_ERROR_505_HTTP_VERSION_NOT_SUPORTED);
+            assertEquals(e.getErrorCode(), HttpStatusCode.SERVER_ERROR_505_HTTP_VERSION_NOT_SUPPORTED);
         }
     }
     @Test
@@ -157,7 +157,7 @@ class HttpParserTest {
     }
 
     private InputStream generateBadTestCaseMethodName1() {
-        String rawData = "GET / HTTP/1.1\r\n" +
+        String rawData = "GeT / HTTP/1.1\r\n" +
                 "Host: localhost:8080\r\n" +
                 "Accept-Language: en-GB,en;q=0.9,en-US;q=0.8\r\n" +
                 "\r\n";
